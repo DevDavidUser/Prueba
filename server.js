@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const {sequelize, DBconnection} = require('./config/db');
 
+app.use(express.json());
+
 const usersRoute = require("./routes/users");
 app.use("/",usersRoute);
 
